@@ -8,7 +8,7 @@ export const Portfolio = () => {
   return (
     <div className="min-h-screen bg-light-background dark:bg-background">
       <Navbar />
-      <main className="pt-36">
+      <main className="py-36">
         <div className="max-w-4xl md:mx-auto mx-6 p-6 rounded-lg shadow-lg bg-light-card/50 dark:bg-card/50 transition-all duration-300 ease-in-out transform hover:rotate-1 hover:shadow-lg hover:shadow-secondary hover:border hover:border-secondary hover:scale-[1.02]">
           {/* Profile Section */}
           <div className="flex flex-col items-center gap-8 mb-8 text-center md:text-start md:flex-row">
@@ -35,7 +35,7 @@ export const Portfolio = () => {
           {/* Technologies Section */}
           <div className="mb-8 transition-all duration-300 hover:translate-x-2">
             <h3 className="text-2xl font-semibold mb-4 hover:text-secondary transition-colors duration-200">
-              technologies
+              Technologies
             </h3>
             <div className="flex flex-wrap gap-3">
               {PortfolioData.techs.map((tech, index) => (
@@ -48,7 +48,7 @@ export const Portfolio = () => {
 
           {PortfolioData.experiences &&
             PortfolioData.experiences.length > 0 && (
-              <PortfolioSection title="experience" icon={FaBriefcase}>
+              <PortfolioSection title="Experience" icon={FaBriefcase}>
                 <div className="grid md:grid-cols-2 gap-4">
                   {PortfolioData.experiences.map((experience, index) => (
                     <ExperienceCard key={index} experience={experience} />
@@ -60,7 +60,7 @@ export const Portfolio = () => {
           {/* Projects Section */}
           <div className="transition-all duration-300 hover:translate-x-2">
             <h3 className="text-2xl font-semibold mb-4 hover:text-secondary transition-colors duration-200">
-              featuredProjects
+              Featured Projects
             </h3>
             <div className="grid md:grid-cols-2 gap-4 text-gray-600 dark:text-gray-300">
               {PortfolioData.links.github && (
@@ -70,7 +70,7 @@ export const Portfolio = () => {
                   rel="noopener noreferrer"
                   className="p-4 rounded-lg transition-all duration-300 bg-light-background/50 dark:bg-background/50 hover:bg-gray-100 dark:hover:bg-gray-600 hover:scale-105 hover:shadow-md flex justify-between items-center gap-2"
                 >
-                  viewGithubProjects
+                  View Github Projects
                   <FaArrowRight className="inline-block text-secondary hover:text-2xl cursor-pointer rtl:rotate-180" />
                 </a>
               )}

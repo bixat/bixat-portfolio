@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: "Work Sans", sans-serif;
+  @apply bg-[#F5F5F5] dark:bg-[#2B2B2B] text-[#2B2B2B] dark:text-[#F5F5F5];
+  margin: 0 auto;
+}
+
+hr {
+  @apply border-t-[#cccccc] dark:border-t-[#5b5b5b];
+  width: 60%;
+  margin: 0 auto;
+}
