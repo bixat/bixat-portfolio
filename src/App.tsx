@@ -1,3 +1,4 @@
+import { PortfolioData } from "./data/portfolio_data";
 import { Portfolio } from "./pages/Portfolio";
 import { useEffect } from "react";
 
@@ -9,6 +10,7 @@ function App() {
     } else {
       document.documentElement.classList.remove("dark");
     }
+    document.title = `${PortfolioData.name} | Portfolio`;
   }, []);
 
   return <Portfolio />;
