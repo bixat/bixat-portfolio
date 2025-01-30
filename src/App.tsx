@@ -1,5 +1,17 @@
+import { Portfolio } from "./pages/Portfolio";
+import { useEffect } from "react";
+
 function App() {
-  return <h1 className="text-3xl text-neutral-200 font-bold underline">Hello world!</h1>;
+  useEffect(() => {
+    // Check user's system preferences
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, []);
+
+  return <Portfolio />;
 }
 
 export default App;
