@@ -1,6 +1,9 @@
 
 # Bixat Portfolio
 
+> [!NOTE]  
+> This portfolio is under development
+
 This project is part of our landing page [Bixat.dev](https://bixat.dev), created as an open-source portfolio for use by other developers.
 
 ## Installation
