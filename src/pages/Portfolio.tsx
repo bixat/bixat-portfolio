@@ -1,8 +1,10 @@
 import { BixatChip } from "bixat-chip";
 import { FaArrowRight, FaBriefcase } from "react-icons/fa";
-import { Experience, PortfolioData } from "../data/portfolio_data";
+import { PortfolioData } from "../data/portfolio_data";
 import { MemberLinks } from "../components/Links";
 import { Navbar } from "../components/Navbar";
+import { ExperienceCard } from "../components/ExperienceCard";
+import { PortfolioSection } from "../components/Section";
 
 export const Portfolio = () => {
   return (
@@ -78,44 +80,6 @@ export const Portfolio = () => {
           </div>
         </div>
       </main>
-    </div>
-  );
-};
-
-const ExperienceCard = ({ experience }: { experience: Experience }) => {
-  return (
-    <div className="p-4 m-2 rounded-lg bg-light-background/50 dark:bg-background/50 transition-all duration-300 hover:scale-[1.01] max-w-md">
-      <div className="flex items-center gap-4">
-        <img src={experience.logo} alt="Company logo" className="w-10 h-10" />
-        <div className="flex flex-col">
-          <span className="font-bold hover:text-secondary transition-colors duration-200">
-            {experience.title} at {experience.company}
-          </span>
-          <span className="text-sm text-gray-600 dark:text-gray-300">
-            {experience.duration} - {experience.type}
-          </span>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const PortfolioSection = ({
-  children,
-  title,
-  icon: Icon,
-}: {
-  children: React.ReactNode;
-  title: string;
-  icon?: React.ComponentType<{ className?: string }>;
-}) => {
-  return (
-    <div className="mb-8 transition-all duration-300 hover:translate-x-2">
-      <h3 className="text-2xl font-semibold mb-4 hover:text-secondary transition-colors duration-200 flex items-center gap-2">
-        {Icon && <Icon />}
-        {title}
-      </h3>
-      {children}
     </div>
   );
 };
