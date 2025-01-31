@@ -47,6 +47,30 @@ export const PortfolioData = {
             logo: logo,
         },
     ],
+    certifications: [
+        {
+            name: "Certified Kubernetes Administrator",
+            issuer: "The Linux Foundation",
+            date: "2021-08-01",
+        },
+        {
+            name: "AWS Certified Solutions Architect",
+            issuer: "Amazon Web Services",
+            date: "2020-05-15",
+        },
+    ],
+    education: [
+        {
+            degree: "Bachelor of Science in Computer Science",
+            institution: "University of Example",
+            year: "2018",
+        },
+        {
+            degree: "Master of Science in Software Engineering",
+            institution: "University of Example",
+            year: "2020",
+        },
+    ],
 };
 
 

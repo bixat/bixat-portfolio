@@ -1,5 +1,10 @@
 import { BixatChip } from "bixat-chip";
-import { FaArrowRight, FaBriefcase } from "react-icons/fa";
+import {
+  FaArrowRight,
+  FaBriefcase,
+  FaGraduationCap,
+  FaCertificate,
+} from "react-icons/fa";
 import { PortfolioData } from "../data/portfolio_data";
 import { MemberLinks } from "../components/Links";
 import { Navbar } from "../components/Navbar";
@@ -47,13 +52,61 @@ export const Portfolio = () => {
           </div>
 
           {/* Experience Section */}
-
           {PortfolioData.experiences &&
             PortfolioData.experiences.length > 0 && (
               <PortfolioSection title="Experience" icon={FaBriefcase}>
                 <div className="grid md:grid-cols-2 gap-4">
                   {PortfolioData.experiences.map((experience, index) => (
                     <ExperienceCard key={index} experience={experience} />
+                  ))}
+                </div>
+              </PortfolioSection>
+            )}
+
+          {/* Education Section */}
+          {PortfolioData.education && PortfolioData.education.length > 0 && (
+            <PortfolioSection title="Education" icon={FaGraduationCap}>
+              <div className="grid md:grid-cols-2 gap-4">
+                {PortfolioData.education.map((education, index) => (
+                  <div
+                    key={index}
+                    className="p-4 rounded-lg bg-light-background/50 dark:bg-background/50"
+                  >
+                    <h4 className="text-xl font-semibold">
+                      {education.degree}
+                    </h4>
+                    <p className="text-gray-600 dark:text-gray-300">
+                      {education.institution}
+                    </p>
+                    <p className="text-gray-500 dark:text-gray-400">
+                      {education.year}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </PortfolioSection>
+          )}  
+
+          {/* Certifications Section */}
+          {PortfolioData.certifications &&
+            PortfolioData.certifications.length > 0 && (
+              <PortfolioSection title="Certifications" icon={FaCertificate}>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {PortfolioData.certifications.map((certification, index) => (
+                    <div
+                      key={index}
+                      className="p-4 rounded-lg bg-light-background/50 dark:bg-background/50"
+                    >
+                      <h4 className="text-xl font-semibold">
+                        {certification.name}
+                      </h4>
+                      <p className="text-gray-600 dark:text-gray-300">
+                        {certification.issuer}
+                      </p>
+                      <p className="text-gray-500 dark:text-gray-400">
+                        {certification.date}
+                      </p>
+                    </div>
                   ))}
                 </div>
               </PortfolioSection>
