@@ -1,10 +1,12 @@
 import { BixatTags, TagType } from "bixat-chip";
 import logo from '../assets/logo.png'
+import { PortfolioCardPropos } from "./portfolio_propos";
 
-export const PortfolioData = {
+export const PortfolioData: MemberType = {
     name: "Mohammed chahboun",
     title: "Software Engineer",
     avatar: logo,
+    devToUsername: "m97chahboun",
     links: {
         github: "https://github.com/M97chahboun",
         linkedin: "https://www.linkedin.com/in/m97chahboun/",
@@ -26,50 +28,31 @@ export const PortfolioData = {
     ],
     experiences: [
         {
-            title: "Senior Software Engineer",
-            company: "Bixat.dev",
-            duration: "2022 - Now",
-            type: "Full Time",
+            title: "Team lead at Bixat.dev",
+            subtitle: "2022 - Now",
             logo: logo,
-        },
-        {
-            title: "Senior Software Engineer",
-            company: "Bixat.dev",
-            duration: "2022 - Now",
-            type: "Full Time",
-            logo: logo,
-        },
-        {
-            title: "Senior Software Engineer",
-            company: "Bixat.dev",
-            duration: "2022 - Now",
-            type: "Full Time",
-            logo: logo,
-        },
+            url: "https://www.bixat.dev/",
+        }
     ],
-    certifications: [
+    projects: [
         {
-            name: "Certified Kubernetes Administrator",
-            issuer: "The Linux Foundation",
-            date: "2021-08-01",
+            title: "Project 1",
+            subtitle: "at Bixat.dev",
+            logo: logo,
+            url: "https://www.bixat.dev/",
         },
         {
-            name: "AWS Certified Solutions Architect",
-            issuer: "Amazon Web Services",
-            date: "2020-05-15",
-        },
-    ],
-    education: [
-        {
-            degree: "Bachelor of Science in Computer Science",
-            institution: "University of Example",
-            year: "2018",
+            title: "Project 2",
+            subtitle: "at Bixat.dev",
+            logo: logo,
+            url: "https://www.bixat.dev/",
         },
         {
-            degree: "Master of Science in Software Engineering",
-            institution: "University of Example",
-            year: "2020",
-        },
+            title: "Project 3",
+            subtitle: "at Bixat.dev",
+            logo: logo,
+            url: "https://www.bixat.dev/",
+        }
     ],
 };
 
@@ -82,28 +65,13 @@ export interface Links {
     flutter?: string | null;
 }
 
-export interface Experience {
-    title: string;
-    company: string;
-    duration: string;
-    type?: string;
-    logo: string;
-}
-
-export interface Project {
-    name: string;
-    description: string;
-    technologies: TagType[];
-    link?: string;
-    image?: string;
-}
-
 export type MemberType = {
     name: string;
     title: string;
     avatar: string;
     links: Links;
     techs: TagType[];
-    experiences?: Experience[];
-    projects?: Project[];
+    experiences?: PortfolioCardPropos[];
+    projects?: PortfolioCardPropos[];
+    devToUsername?: string;
 };
