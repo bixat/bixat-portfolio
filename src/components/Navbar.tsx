@@ -1,3 +1,4 @@
+import { PortfolioData } from "../data/portfolio_data";
 import { ThemeSwitch } from "./ThemeSwitch";
 
 export const Navbar = () => {
@@ -8,7 +9,7 @@ export const Navbar = () => {
           {/* Logo/Brand */}
           <div className="flex-shrink-0">
             <span className="text-xl font-bold text-gray-900 dark:text-white">
-              Bixat
+              {PortfolioData.name}
             </span>
           </div>
 
